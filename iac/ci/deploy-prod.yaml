@@ -1,0 +1,10 @@
+prod:
+  extends: .nomad-deploy
+  environment:
+    name: prod
+  only:
+    - tags
+  before_script:
+    - export INSTANCE_COUNT=1
+    - export NOMAD_DC=prod
+  when: manual

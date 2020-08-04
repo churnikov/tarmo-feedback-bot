@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "feedback_bot"
+version = "0.0.1"
+description = ""
+authors = ["Nikita Churikov <nikita@chur.ru>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+python-telegram-bot = "^12.2"
+loguru = "^0.4.1"
+click = "^7.0"
+python-dotenv = "^0.11.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.3"
+
+[tool.black]
+line-length = 100
+target_version = ["py37"]
+
+[tool.poetry.scripts]
+run_bot = 'feedback_bot:main'
+
+[build-system]
+requires = ["poetry==1.*"]
+build-backend = "poetry.masonry.api"
+

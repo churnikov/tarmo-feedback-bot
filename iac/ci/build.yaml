@@ -1,0 +1,4 @@
+tags:
+  extends: .docker-build
+  only:
+    - tags

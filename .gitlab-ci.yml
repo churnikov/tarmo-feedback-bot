@@ -1,0 +1,14 @@
+stages:
+  - build
+  - deploy
+
+include:
+  - project: 'biocad/bcd-ci-common'
+    ref: master
+    file: '/deploy/nomad-deploy.yaml'
+  - project: 'biocad/bcd-ci-common'
+    ref: master
+    file: '/build/docker-build.yaml'
+  - local: 'iac/ci/build.yaml'
+  - local: 'iac/ci/deploy-prod.yaml'
+  - local: 'iac/ci/deploy-test.yaml'
