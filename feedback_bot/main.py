@@ -49,7 +49,7 @@ def main(dev: bool):
 
     # Messages handler
     dp.add_handler(MessageHandler(Filters.reply, reply_callback))
-    dp.add_handler(MessageHandler(Filters.document, forward_callback))
+    dp.add_handler(MessageHandler(Filters.all, forward_callback))
 
     # log all errors
     dp.add_error_handler(error)
